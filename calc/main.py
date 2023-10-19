@@ -10,5 +10,8 @@ elif operator == "/":
     print(num1/num2)
 elif operator == "*":
     print(num1*num2)
+
+print('hello mactab')
 else:
     raise ValueError("Operation has invalid !")
+    
