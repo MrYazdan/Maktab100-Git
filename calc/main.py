@@ -9,7 +9,8 @@ elif operator == "-":
 elif operator == "//":
     print(num1//num2)
 elif operator == "/":
-    print(num1/num2)
+    print("Div:", num1/num2)
+    print("-" * 100)
 elif operator == "*":
     print(num1*num2)
 else:
