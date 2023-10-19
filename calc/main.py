@@ -9,6 +9,8 @@ elif operator == "-":
 elif operator == "//":
     print(num1//num2)
 elif operator == "/":
+    if num2==0:
+        raise ZeroDivisionError
     print("Div:", num1/num2)
     print("-" * 100)
 elif operator == "*":
