@@ -15,5 +15,7 @@ elif operator == "/":
     print("-" * 100)
 elif operator == "*":
     print(num1*num2)
+elif operator == "**":
+    print(num1**num2)
 else:
     raise ValueError("Operation has invalid !")
