@@ -1,21 +1,29 @@
-num1 = float(input("Number 1 : "))
-num2 = float(input("Number 2 : "))
-operator = input("operator : ")
+try:
+    num1 = float(input("Number 1: "))
+    num2 = float(input("Number 2: "))
+except ValueError:
+    print("Error: Please enter valid numbers.")
+    # Here you could add more logic, such as requesting input again or exiting the program.
+
+operator = input("Operator: ")
 
 if operator == "+":
-    print(num1+num2)
+    print(num1 + num2)
 elif operator == "-":
-    print(num1-num2)
+    print(num1 - num2)
 elif operator == "//":
-    print(num1//num2)
+    print(num1 // num2)
 elif operator == "/":
-    if num2==0:
-        raise ZeroDivisionError
-    print("Div:", num1/num2)
-    print("-" * 100)
+    try:
+        if num2 == 0:
+            raise ZeroDivisionError
+        print("Div:", num1 / num2)
+        print("-" * 100)
+    except ZeroDivisionError:
+        print("Error: Division by zero is not allowed.")
 elif operator == "*":
-    print(num1*num2)
+    print(num1 * num2)
 elif operator == "**":
-    print(num1**num2)
+    print(num1 ** num2)
 else:
-    raise ValueError("Operation has invalid !")
+    print("Error: Invalid operation!")
